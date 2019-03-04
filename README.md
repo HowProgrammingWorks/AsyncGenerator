@@ -1,2 +1,1 @@
-# AsyncGenerator
-Asynchronous Generators
+## Asynchronous Generators
