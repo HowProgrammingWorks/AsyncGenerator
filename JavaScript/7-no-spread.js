@@ -4,7 +4,7 @@ async function* ids(...args) {
   let i = 0;
   while (args.length > i) {
     const id = args[i++];
-    if (id === undefined) return -1;
+    if (id === undefined) return;
     yield id;
   }
 }
@@ -15,5 +15,7 @@ async function* ids(...args) {
   // console.log(await [...id]);
   // console.log([await ...id]);
   // console.log([...await id]);
-  Promise.all([id.next(), id.next(), id.next(), id.next(), id.next(), id.next()]).then(console.log);
+  Promise
+    .all([id.next(), id.next(), id.next(), id.next(), id.next(), id.next()])
+    .then(console.log);
 })();
