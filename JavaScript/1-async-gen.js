@@ -3,24 +3,27 @@
 // Generator function
 
 function* genFn(x) {
-  return x * 2;
+  yield x * 2;
+  return x * 3;
 }
 
 async function* asyncGenFn(x) {
-  return x * 2;
+  yield x * 2;
+  return x * 3;
 }
 
 const asyncGenFn2 = async function* (x) {
-  return x * 2;
+  yield x * 2;
+  return x * 3;
 };
 
 console.log('asyncGenFn =', [asyncGenFn]);
 console.log('asyncGenFn.toString() =', [asyncGenFn.toString()]);
-console.log('typeof(asyncGenFn) =', typeof(asyncGenFn));
+console.log('typeof asyncGenFn =', typeof asyncGenFn);
 const fnProto = Object.getPrototypeOf(asyncGenFn);
 console.log('fnProto.constructor.name =', fnProto.constructor.name);
 
-console.log('typeof(asyncGenFn(5)) =', typeof(asyncGenFn(5)));
+console.log('typeof asyncGenFn(5) =', typeof asyncGenFn(5));
 console.log('asyncGenFn(5).toString() =', asyncGenFn(5).toString());
 const genProto = Object.getPrototypeOf(asyncGenFn(5));
 console.log('genProto =', genProto);

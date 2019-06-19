@@ -4,9 +4,11 @@ class Multiplier {
   constructor(k) {
     this.value = k;
   }
+
   async* asyncGenMethod(a) {
-    this.value = a * this.value;
-    return a * this.value;
+    yield this.value;
+    this.value = this.value * a;
+    return this.value;
   }
 }
 
