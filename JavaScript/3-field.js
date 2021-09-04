@@ -4,7 +4,7 @@ const obj1 = {
   value: 2,
   async* asyncGenMethod(a) {
     yield this.value;
-    this.value = this.value * a;
+    this.value *= a;
     return this.value;
   }
 };
