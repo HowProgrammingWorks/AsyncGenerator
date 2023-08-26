@@ -11,7 +11,10 @@ async function* counter(begin, end, delta) {
     if (back) {
       value += back;
       nextValue += back;
-      if (nextValue > end) return;
+      if (nextValue > end) {
+        value = undefined;
+        return value;
+      }
     }
   }
 }
