@@ -15,7 +15,12 @@ async function* ids(...args) {
   // console.log(await [...id]);
   // console.log([await ...id]);
   // console.log([...await id]);
-  Promise
-    .all([id.next(), id.next(), id.next(), id.next(), id.next(), id.next()])
-    .then(console.log);
+  Promise.all([
+    id.next(),
+    id.next(),
+    id.next(),
+    id.next(),
+    id.next(),
+    id.next(),
+  ]).then(console.log);
 })();

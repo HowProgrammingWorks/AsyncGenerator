@@ -2,11 +2,11 @@
 
 const obj1 = {
   value: 2,
-  async* asyncGenMethod(a) {
+  async *asyncGenMethod(a) {
     yield this.value;
     this.value *= a;
     return this.value;
-  }
+  },
 };
 
 console.log('obj1 =', obj1);

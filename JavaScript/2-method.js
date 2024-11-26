@@ -5,7 +5,7 @@ class Multiplier {
     this.value = k;
   }
 
-  async* asyncGenMethod(a) {
+  async *asyncGenMethod(a) {
     yield this.value;
     this.value *= a;
     return this.value;

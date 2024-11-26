@@ -17,6 +17,8 @@ const asyncGenFn2 = async function* (x) {
   return x * 3;
 };
 
+console.log('genFn(5) =', genFn(5));
+
 console.log('asyncGenFn =', [asyncGenFn]);
 console.log('asyncGenFn.toString() =', [asyncGenFn.toString()]);
 console.log('typeof asyncGenFn =', typeof asyncGenFn);
@@ -32,3 +34,5 @@ console.log('genProto[Symbol.asyncIterator] =', genProto[Symbol.asyncIterator]);
 console.log('asyncGenFn(5) =', asyncGenFn(5));
 console.log('asyncGenFn(5).next() =', asyncGenFn(5).next());
 console.log('asyncGenFn(5).next().value =', asyncGenFn(5).next().value);
+
+console.log('asyncGenFn2(5) =', asyncGenFn2(5));
