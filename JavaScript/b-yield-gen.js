@@ -17,7 +17,7 @@ async function* genFn() {
   yield* gen2();
 }
 
-(async () => {
+const main = async () => {
   const c = genFn();
   const val1 = await c.next();
   const val2 = await c.next();
@@ -27,4 +27,6 @@ async function* genFn() {
   const val6 = await c.next();
   const val7 = await c.next();
   console.log({ val1, val2, val3, val4, val5, val6, val7 });
-})();
+};
+
+main();

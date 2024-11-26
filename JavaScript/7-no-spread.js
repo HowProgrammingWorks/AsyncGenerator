@@ -9,7 +9,7 @@ async function* ids(...args) {
   }
 }
 
-(async () => {
+const main = async () => {
   const id = ids(1011, 1078, 1292, 1731, undefined, 1501, 1550);
   // console.log([...id]);
   // console.log(await [...id]);
@@ -23,4 +23,6 @@ async function* ids(...args) {
     id.next(),
     id.next(),
   ]).then(console.log);
-})();
+};
+
+main();
