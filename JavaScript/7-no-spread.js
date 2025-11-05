@@ -11,10 +11,6 @@ async function* ids(...args) {
 
 const main = async () => {
   const id = ids(1011, 1078, 1292, 1731, undefined, 1501, 1550);
-  // console.log([...id]);
-  // console.log(await [...id]);
-  // console.log([await ...id]);
-  // console.log([...await id]);
   Promise.all([
     id.next(),
     id.next(),
